@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabajos</title>
+    <!-- CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet"/>
+    <link href="assets/css/principal.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/trabajos.css" rel="stylesheet" type="text/css">
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/9808746004.js" crossorigin="anonymous"></script>
+    <script src="assets/js/principal.js" defer></script>
+    <script src="assets/js/trabajos.js" defer></script>
+    <script src="processing.js" defer></script> 
+    <script language=”javascript” src=../processing-js-master/javascript.js” defer></script>
+</head>
+<body>
+    <header id="header" class="header">
+        <nav id="main-nav" class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+                <a href="index.html" ><img id="logo" src="assets/imagenes/header/logo.png"alt="logo"/></a>
+                <div class="navbar-collapse">
+                        <ul class="navbar-nav my-2 my-lg-0 ms-auto" style="--bs-scroll-height: 120px;">
+                            <li class="nav-item">
+                                <a class="nav-link text-light"  href="index.html">Sobre mí</a>
+                            </li>
+                            <li class="nav-item">
+                                <a id="current_page" class="nav-link active text-light" href="#">Trabajos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link  text-light" href="contacto.html">Contacto</a>
+                            </li>
+                        </ul>
+                </div>
+            </div>
+        </nav>
+        <nav class="navbar navbar-expand-lg secondary-nav">
+            <div class="navbar-collapse">
+                <ul class="nav">
+                    <li class="nav-item animate__animated">
+                        <a class="nav-link secondary-nav-link"  href="#Destacados">Destacados</a>
+                    </li>
+                    <li class="nav-item animate__animated">
+                        <a class="nav-link secondary-nav-link" href="#Simulacion">Simulación</a>
+                    </li>
+                    <li class="nav-item animate__animated">
+                        <a class="nav-link secondary-nav-link" href="#Animacion">Animación</a>
+                    </li>
+                    <li class="nav-item animate__animated">
+                        <a class="nav-link secondary-nav-link" href="#Otros">Otros</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+
+    <div class="container" style="margin-top: 6%;">
+  <!-- MODAl -->
+    <!-- Destacados -->
+    <!-- Animación -->
+  <div class="modal fade" id="riggingAnimacion" tabindex="-1" aria-labelledby="riggingAnimacionLabel" aria-hidden="true">
+    <div class="modal-dialog modal-l modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="riggingAnimacionLabel">Rigging y Animación</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="container modal-body">
+            <div class="col-12">
+                <video src="assets/videos/TrabajoFinalAnimacion.mp4" poster="assets/imagenes/trabajos/rigging.png" style="height: 100%; width: 100%;"></video>
+                <div class="row container-fluid ms-auto controles-video">
+                  <ul>
+                    <li><i class="fas fa-play fa-lg col-2"></i></li>
+                    <li><i class="fas fa-pause fa-lg col-2"></i></li>
+                    <li><i class="fas fa-stop fa-lg col-2"></i></li>
+                    <li><i class="fas fa-backward fa-lg col-2"></i></li>
+                    <li><i class="fas fa-forward fa-lg col-2"></i></li>
+                    <li><i class="fas fa-expand-arrows-alt fa-lg col-2"></i></li>
+                  </ul>
+                </div>
+                <div class="container">
+                    <div class="mt-3">
+                        <label class="mb-1">Progreso 
+                            <div class="tiempo-video"></div>
+                        </label>
+                        <div class="row">
+                            <div class="progress">
+                                <div class="progress-number"></div>
+                                <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-fluid">
+                    <div class="mt-3">
+                      <label>Volumen</label>
+                      <div class="row">
+                        <div class="col-11"><input type="range" min="0" max="100" value="100" class="form-range volume"></div>
+                        <div class="col-1 control-mute"><i class="fas fa-volume-up"></i></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Reproductor de Audio -->
+  <div class="modal fade" id="reproductorAudio" tabindex="-1" aria-labelledby="reproductorAudioLabel" aria-hidden="true">
+    <div class="modal-dialog modal-l modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="reproductorAudioLabel">Reproductor Audio</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="container modal-body">
+            <div class="col-12">
+                <div class="btn-group">
+                    <button id="audio1" type="button" class="btn" name="Himno España" >Audio 1</button>
+                    <button id="audio2" type="button" class="btn" name="Himno Francia">Audio 2</button>
+                    <button id="audio3" type="button" class="btn" name="Himno Italia">Audio 3</button>
+                </div> 
+                <div id="nombre-audio"></div>
+                <div id="div-audio"></div>
+                <div class="control-tiempo-audio">
+                    <div id="estado-audio"></div>
+                    <div id="tiempo-audio"></div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- Simulacion -->
+  <div class="modal fade" id="BubbleShooter" tabindex="-1" aria-labelledby="BubbleShooterLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="BubbleShooterLabel">Bubble Shooter</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="container modal-body">
+            <div class="d-flex justify-content-center">
+                <iframe width="720" height="405" src="https://www.youtube.com/embed/pWl-elyDbBs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="text">
+                <p>El propósito de la simulación es recrear de manera sencilla el juego de Bubble Shooter.</p>
+                <p>Los controles básicos son:</p>
+                <ul>
+                    <li><u>Flechas izquierda y derecha</u></li>
+                        Rota la dirección de salida de la bola. La rotación tiene un recorrido de 180º.
+                    <li><u>Espacio</u></li>
+                        Lanza la bola en la dirección indicada
+                </ul>
+                <p>El movimiento de la burbuja se ha simulado a partir del método de integración de <b>Euler Simpléctico.</b></p>
+            </div>   
+        </div>
+        <div class="modal-footer">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="FireWorks" tabindex="-1" aria-labelledby="FireWorksLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="FireWorksLabel">Fuegos Artificiales</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="container">
+            <div class="d-flex justify-content-center">
+                <iframe width="720" height="405" src="https://www.youtube.com/embed/UKNF8O2UO8s" title="YouTube video player" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="text">
+                <p>El propósito de la simulación es crear un castillo de fuegos artificiales, a partir de cohetes que explotan y 
+                    generan palmeras con distintas formas y colores.
+                </p>
+                <p>Cuando un cohete explota, se genera un emisor de partículas, y en función del tipo de palmeras que emita,
+                    inicializará la dirección y la velocidad de las partículas de distinta forma.
+                    <br>Las palmeras implementadas para esta simulación han sido:
+                    <ol>
+                        <li><b>Semi-círculo</b>
+                            <img src="assets/imagenes/trabajos/semicirculo.png">
+                        </li>
+                        <li><b>Corazón</b>
+                            <img src="assets/imagenes/trabajos/corazon.png">
+                        </li>
+                        <li><b>Flor</b>
+                            <img src="assets/imagenes/trabajos/flor.png">
+                        </li>
+                        <li><b>Direcciones aleatorias</b>
+                            <img src="assets/imagenes/trabajos/aleatorio.png">
+                        </li>
+                        <li><b>Triple Direcciones aleatorias</b>
+                            <img src="assets/imagenes/trabajos/triplealeatorio.png">
+                        </li>
+                    </ol>
+                </p>
+            </div>
+        </div>
+        <div class="modal-footer">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="TiroParabolico" tabindex="-1" aria-labelledby="TiroParabolicoLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="TiroParabolicoLabel">Tiro Parabólico</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="container">
+            <div class="d-flex justify-content-center">
+                <iframe width="720" height="405" src="https://www.youtube.com/embed/Kn1KRe7Hqb8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="text">
+                <p>El propósito de la simulación es crear un escenario donde exista un lanzamiento de un objeto en 2D,
+                    con velocidad en ambos ejes, y que esté sujeto a la acción de un campo gravitatorio uniforme. </p>
+                <p>El método de integración utilizado para los cálculos de la simulación es <b>Euler Explícito</b></p>
+            </div>
+        </div>
+        <div class="modal-footer">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="MallaDeformable" tabindex="-1" aria-labelledby="MallaDeformableLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="MallaDeformableLabel">Mallas Deformables</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="container">
+            <div class="d-flex justify-content-center">
+                <iframe width="720" height="405" src="https://www.youtube.com/embed/tP8Tpumy3pI?enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="text">
+                <p>El propósito de la simulación es crear, interactuar, y romper una malla 2D.</p>
+                <p>Esta malla está creada siguiendo el modelo masa-muelle 2D, por el cual la deformación se obtiene
+                    al conectar las partículas mediante una red de muelles. <br>
+                    En cada paso de simulación se calcularán las fuerzas internas y externas que actúan sobre cada partícula.
+                </p>
+                <p>Las distintas disposiciones que pueden adoptar los muelles dentro de la malla son:</p>
+                <ol>
+                    <li>
+                        <b>Structural: </b> Cada nodo se une con los nodos adyacentes a izquierda, derecha, arriba y abajo.
+                        <img src="assets/imagenes/trabajos/structural.png">
+                    </li>            
+                    <li>
+                        <b>Shear: </b> cada nodo se une con los nodos que se encuentran en sus diagonales.
+                        <img src="assets/imagenes/trabajos/shear.png">
+                    </li>
+                    <li>
+                        <b>Bend: </b> cada nodo se une con los nodos que se encuentran a una distancia de 2 nodos, tanto horizontal como verticalmente.
+                        <img src="assets/imagenes/trabajos/bend.png">
+                    </li>
+                </ol>
+            </div>   
+        </div>
+        <div class="modal-footer">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="Olas" tabindex="-1" aria-labelledby="OlasLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="OlasLabel">Olas</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="container">
+            <div class="d-flex justify-content-center">
+                <iframe width="720" height="405" src="https://www.youtube.com/embed/wtOxLzcbGPQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="text">
+                <p>El propósito de la simulación es implementar distintos modelos de olas basados en la topología de <b>mapas de alturas</b>.</p>
+
+                <ol>
+                    <li> <b>Ondas Radiales</b>
+                        <p>Sumatorio de ondas a distintas frecuencias, con un epicentro, y cuyas crestas de la ola son paralelas
+                        <br>Su función es calculada a partir de la distancia a la que se encuentra de la fuente</p>
+                        <img src="assets/imagenes/trabajos/radial.png">
+                    </li>            
+                    <li>
+                        <b>Ondas Direccionales</b>
+                        <p>Onda que se propaga solamente en una dirección específica</p>
+                        <img src="assets/imagenes/trabajos/direccional.png">
+                    </li>
+                    <li>
+                        <b>Ondas Gerstner</b>
+                        <p>Simula una onda más realistas, con crestas inclinadas, a partir del cálculo del coeficiente Q.
+                        <br>Este tipo de onda no solo mueve la altura del mapa, sino que también modifica los vértices de la base.</p>
+                        <img src="assets/imagenes/trabajos/gerstner.png" width="100px" height="150">
+
+                    </li>
+                </ol>
+            </div>   
+        </div>
+        <div class="modal-footer">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="Banderas" tabindex="-1" aria-labelledby="BanderasLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="BanderasLabel">Tejidos y Bandras</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="container">
+            <div class="d-flex justify-content-center">
+                <iframe width="720" height="405" src="https://www.youtube.com/embed/nfYm06i1QwY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="text">
+                <p>El propósito de la simulación es crear tejidos que formen banderas.</p>
+                <p>Esta malla está creada siguiendo el modelo masa-muelle 2D, por una red cuyas partículas internas se interconectan vía mulles. <br>
+                    En cada paso de simulación se calcularán las fuerzas internas y externas que actúan sobre cada partícula.
+                </p>
+                <p>Las distintas disposiciones que pueden adoptar los muelles dentro de la malla son:</p>
+                <ol>
+                    <li>
+                        <b>Structural: </b> Cada nodo se une con los nodos adyacentes a izquierda, derecha, arriba y abajo.
+                        <img src="assets/imagenes/trabajos/structural.png">
+                    </li>            
+                    <li>
+                        <b>Shear: </b> cada nodo se une con los nodos que se encuentran en sus diagonales.
+                        <img src="assets/imagenes/trabajos/shear.png">
+                    </li>
+                    <li>
+                        <b>Bend: </b> cada nodo se une con los nodos que se encuentran a una distancia de 2 nodos, tanto horizontal como verticalmente.
+                        <img src="assets/imagenes/trabajos/bend.png">
+                    </li>
+                </ol>
+            </div>     
+        </div>
+        <div class="modal-footer">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="Pinball" tabindex="-1" aria-labelledby="PinballLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="PinballLabel">Pinball</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="container">
+            <div class="d-flex justify-content-center">
+                <iframe width="720" height="405" src="https://www.youtube.com/embed/MeS7hAMmm5E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="col-10 text">
+                <p>El propósito de la simulación es interactuar y provocar situaciones que den lugar a colisiones entre objetos.</p>
+                <p>Una colisión se define como una interacción entre dos o más cuerpos, de los cuales almenos uno está en movimiento, produciendo un intercambio de momento y energía.<br>
+                Las diferentes colisiones que pueden ocurrir en el escenario:</p>
+                
+                <ol>
+                    <li>
+                        <b>Colisión Partícula-Partícula</b>
+                        <div>
+                            Dos partículas colisionarán cuando la distancia que haya entre ellas, sea menor que la suma de sus radios <br>
+                            Cuando las partículas colisionan, se descomponen sus velocidades en normal y tangencial en la dirección de la colisión. En esta simulación, 
+                            se ha implementado el modelo de colisiones basado en velocidades.
+                        </div>
+                        <br>Esta colisión puede suceder entre:
+                        <ul>
+                            <li><u>Partículas en movimiento</u></li>
+                                <div>El cálculo de colisión se realizará utilizando el modelo basado en velocidades</div><br>
+                            <li><u>Partícula en movimiento con fija</u></li>
+                                <div>El cálculo de colisión se realizará utilizando el modelo basado en muelles</div><br>
+                        </ul>
+                        
+                        <img src="assets/imagenes/trabajos/col_part_vel.JPG">
+                    </li>
+                    
+                    <li>
+                        <b>Colisión Partícula-Plano</b>
+                        <div>
+                            Una partícula colisionará con un plano cuando la distancia en la dirección normal del plano sea menor al radio de la partícula <br>
+                            Cuando una partícula colisiona y/o penetra sobre un plano, se siguen los siguientes pasos:
+                            <ul>
+                                <li>Reposicionamiento de la partícula al lugar adecuado</li>
+                                <li>Descomposición de la velociadad en normal y tangencial</li>
+                                <li>Cambio de signo de la velocidad normal</li>
+                            </ul>     
+                        </div>
+                        <img src="assets/imagenes/trabajos/col_part_plane.png">
+                    </li>
+                </ol>
+            </div> 
+        </div>
+        <div class="modal-footer">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="Pendulo" tabindex="-1" aria-labelledby="PenduloLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="PenduloLabel">Péndulo Elástico</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="container">
+            <div class="d-flex justify-content-center">
+                <iframe width="720" height="405" src="https://www.youtube.com/embed/OUlyUSog1wA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="col-10 text">
+                <p>El propósito de la simulación es saber simular un fenómeno físico derivando sus ecuaciones y aplicando métodos de integración numérica.</p>
+                <p>Consideramos que en el escenario, existirá una partícula P, de masa m, colgada de un punto fijo. Entre ese punto fijo y la partícula
+                    existirá un <b>muelle</b> con una <b>constante elástica Ke</b>, y una elongación en reposo.
+                </p>
+                <p>
+                    Debido a la <b>Fuerza Elástica</b>, y/o a la Fuerzo del Peso causada por la gravedad, el muelle de la partícula comenzará a acelerarse,
+                    y a moverse con una velocidad determinada. 
+                </p>
+                <p>
+                    Además de lo comentado anteriormente, se simularán casos donde exista una <b>Fuerza de Rozamiento</b>, que provocará
+                    que se pierda energía. Esta Fuerza de Rozamiento será proporcional al cuadrado de la velocidad.
+                </p>
+            </div> 
+        </div>
+        <div class="modal-footer">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="MotorFisico" tabindex="-1" aria-labelledby="#MotorFisicoLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="MotorFisicoLabel">Órbita terrestre</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="container">
+            <div class="d-flex justify-content-center">
+                <iframe width="720" height="405" src="https://www.youtube.com/embed/u_Y8ef2kevg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="col-10 text">
+                <p>El propósito de la simulación es probar e interactuar con la librería Física de Processing</p>
+                <p>En el escenario existen un número de cubos, y un coche, formado por uniones entre una caja y dos círculos. <br>
+                    A las ruedas del coche se les puede aplicar una rotación de un torque, lo que provocará aceleración y el coche se moverá.</p>
+            </div>  
+        </div>
+        <div class="modal-footer">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="Orbita" tabindex="-1" aria-labelledby="OrbitaLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="OrbitaLabel">Órbita terrestre</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="container">
+            <div class="d-flex justify-content-center">
+                <iframe width="720" height="405" src="https://www.youtube.com/embed/5ryXSd9yu-8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>            </div>
+                <div class="col-10 text">
+                    <p>El propósito de la simulación es saber simular un fenómeno físico derivando sus ecuaciones y aplicando métodos de integración numérica.</p>
+                    <p>Consideraremos un planeta P, de masa m, orbitande alrededor de una estrella E, de masa M. <br>
+                        Se ha seleccionado los parámetros correspondientes a la órbita del planeta Tierra con respecto al Sol, y las masas y radios de estos.
+                        <br>Para calcular  la órbita que describe el planeta P sobre la estrella E, se utilizará la <b>Ley de la Gravitación Universal</b>,
+                        propuesta por Isaac Newton en 1687.
+                    </p>
+                    <p>
+                        En el escenario 2D se encuentran dos partículas: la estrella E, en el centro, y el planeta P, orbitando. <br>
+                        Estudiaremos el comportamiento de la simulación según el integrador utilizado para calcular las ecuaciones del problema.
+
+                    </p>
+                </div>  
+        </div>
+        <div class="modal-footer">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="Fluidos" tabindex="-1" aria-labelledby="FluidosLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="FluidosLabel">Simulación de Fluidos</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="container">
+            <div class="d-flex justify-content-center">
+                <iframe width="720" height="405" src="https://www.youtube.com/embed/eVbazAMebbw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="col-10 text">
+                <p>El propósito de la simulación es implementar, visualizar y analizar el comportamiento de distintos modelos de colisiones de partículas y estructuras de datos para mejorar el rendimiento.</p>
+                <p>
+                    El escenario consta de un recipiente en el caerán hacia el fondo del recipiente un número N de partículas.
+                    Estas partículas caerán por la fuerza de la gravedad; colisionarán con las paredes y también entre sí.<br>
+                    El <b>modelo</b> de tratamiento de <b>colisiones Partícula-Partícula</b> utilizado, es el <b>basado en muelles</b>. En este modelo, no hay reposicionamiento ni
+                    cálculo de velocidades de salida; tan solo se introduce un muelle que une las partículas mientras colisionan, y las repele.
+                </p>
+                <p>
+                    Como el número de partículas que puede haber en el recipiente es del orden de miles, la estrategia de comprobación de colisiones de <b>"fuerza bruta"</b>
+                    (es decir, todas con todas) no parece una buena solución. El orden de comprobaciones sería de O(n<sup>2</sup>). <br>
+                    Por ello, se implementan distintas estructuras de datos para mejorar la escalibidad del sistema:
+                    <ul>
+                        <li>
+                            <u><b>GRID</b></u><br>
+                            Se discretiza <b>todo el espacio en filas y columnas</b>, y cada partícula comprueba si existe colisión con las partículas de 
+                            su propia celda y las vecinas.
+                            <p>Se desaprovecha memoria fácilmente, cuando la simulación solo ocupa una zona concreta del escenario.</p>
+                        </li>
+                        <li>
+                            <u><b>Tabla HASH</b></u><br>
+                            Se discretiza <b>solo allí donde existen partículas</b>. Cada partícula comprueba si existe colisión con las partículas que ocupan
+                            su propia celda y las vecinas. El cálculo de celdas se realiza a partir de una <b>función Hash</b>.
+                            <p>Más eficiente pero consume más memoria.</p>
+                        </li>
+                    </ul>
+                    <p>Estas estructuras de datos reducen el orden de las comprobaciones a O(n·log(n)).</p>
+                </p>
+            </div> 
+        </div>
+        <div class="modal-footer">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="BillarFrances" tabindex="-1" aria-labelledby="BillarFrancesLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="BillarFrancesLabel">Billar Francés</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="container">
+            <div class="col-12 d-flex justify-content-center yt-video">
+                <iframe width="720" height="405" src="https://www.youtube.com/embed/P46TIWphuXY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="col-10 text">
+                <p>El propósito de la simulación es el tratamiento de las colisiones entre objetos.</p>
+                <p>Una colisión se define como una interacción entre dos o más cuerpos, de los cuales almenos uno está en movimiento, produciendo un intercambio de momento y energía.<br>
+                En el caso del escenario, tendrán lugar dos tipos de colisones:</p>
+                
+                <ol>
+                    <li>
+                        <b>Colisión Partícula-Partícula</b>
+                        <div>
+                            Dos partículas colisionarán cuando la distancia que haya entre ellas, sea menor que la suma de sus radios <br>
+                            Cuando las partículas colisionan, se descomponen sus velocidades en normal y tangencial en la dirección de la colisión. En esta simulación, 
+                            se ha implementado el modelo de colisiones basado en velocidades.
+                        </div>
+                        <img src="assets/imagenes/trabajos/col_part_vel.JPG">
+                    </li>
+                    
+                    <li>
+                        <b>Colisión Partícula-Plano</b>
+                        <div>
+                            Una partícula colisionará con un plano cuando la distancia en la dirección normal del plano sea menor al radio de la partícula <br>
+                            Cuando una partícula colisiona y/o penetra sobre un plano, se siguen los siguientes pasos:
+                            <ul>
+                                <li>Reposicionamiento de la partícula al lugar adecuado</li>
+                                <li>Descomposición de la velociadad en normal y tangencial</li>
+                                <li>Cambio de signo de la velocidad normal</li>
+                            </ul>     
+                        </div>
+                        <img src="assets/imagenes/trabajos/col_part_plane.png">
+                    </li>
+                </ol>
+            </div>
+        </div>
+        <div class="modal-footer">
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Animación -->
+  <div class="modal fade" id="TrayectoriaAlabeo" tabindex="-1" aria-labelledby="TrayectoriaAlabeoLabel" aria-hidden="true">
+    <div class="modal-dialog modal-l modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="TrayectoriaAlabeoLabel">Cálculo trayectoria Interpolada</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="container modal-body">
+            <div class="col-12">
+                <video src="assets/videos/Fase3AnimacionAlabeo.mp4" poster="assets/imagenes/trabajos/Fase3AnimacionAlabeo.jpg" style="height: 100%; width: 100%;"></video>
+                <div class="row container-fluid ms-auto controles-video">
+                    <i class="fas fa-play fa-lg col-2"></i>
+                    <i class="fas fa-pause fa-lg col-2"></i>
+                    <i class="fas fa-stop fa-lg col-2"></i>
+                    <i class="fas fa-backward fa-lg col-2"></i>
+                    <i class="fas fa-forward fa-lg col-2"></i>
+                    <i class="fas fa-expand-arrows-alt fa-lg col-2"></i>
+                </div>
+                <div class="container">
+                    <div class="mt-3">
+                        <label class="mb-1">
+                            Progreso 
+                            <div class="tiempo-video">  </div>
+                        </label>
+                        <div class="row">
+                            <div class="progress">
+                                <div class="progress-number"></div>
+                                <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-fluid">
+                    <div class="mt-3">
+                      <label>Volumen</label>
+                      <div class="row">
+                        <div class="col-11"><input type="range" min="0" max="100" value="100" class="form-range volume"></div>
+                        <div class="col-1 control-mute"><i class="fas fa-volume-up"></i></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Rejilla Proyectos -->
+        <main>
+            <section id="Destacados" class="my-4 work-section">
+                <h2>Destacados</h2>
+                <div class="fila-trabajos">
+                        <div class="card" data-bs-toggle="modal" data-bs-target="#riggingAnimacion">
+                            <img src="assets/imagenes/trabajos/rigging.png" class="card-img-top" alt="...">
+                            <div class="card-body row">
+                                <h5 class="col-9 card-title">Animación</h5>
+                                <i class="col-3 fas fa-long-arrow-alt-right fa-2x animate__animated"></i>
+                            </div>
+                        </div>
+                        <div class="card" data-bs-toggle="modal" data-bs-target="#FireWorks">
+                            <img src="assets/imagenes/trabajos/fireworks.png" class="card-img-top" alt="...">
+                            <div class="card-body row">
+                                <h5 class="col-9 card-title">Fuegos Artificiales</h5>
+                                <i class="col-3 fas fa-long-arrow-alt-right fa-2x animate__animated"></i>
+                            </div>
+                        </div>
+                        <div class="card" data-bs-toggle="modal" data-bs-target="#MallaDeformable">
+                            <img src="assets/imagenes/trabajos/MallaDeformable.png" class="card-img-top" alt="...">
+                            <div class="card-body row">
+                                <h5 class="col-9 card-title">Mallas Deformables</h5>
+                                <i class="col-3 fas fa-long-arrow-alt-right fa-2x animate__animated"></i>
+                            </div>
+                        </div>
+                        <div class="card" data-bs-toggle="modal" data-bs-target="#Olas">
+                            <img src="assets/imagenes/trabajos/olas.png" class="card-img-top" alt="...">
+                            <div class="card-body row">
+                                <h5 class="col-9 card-title">Olas</h5>
+                                <i class="col-3 fas fa-long-arrow-alt-right fa-2x animate__animated"></i>
+                            </div>
+                        </div>
+                </div>
+            </section>
+            <section class="my-4 work-section" id="Simulacion">
+                <h2>Simulación</h2>
+                <div class="fila-trabajos">
+                        <div class="card" data-bs-toggle="modal" data-bs-target="#MallaDeformable">
+                            <img src="assets/imagenes/trabajos/MallaDeformable.png" class="card-img-top" alt="...">
+                            <div class="card-body row">
+                                <h5 class="col-9 card-title">Mallas Deformables</h5>
+                                <i class="col-3 fas fa-long-arrow-alt-right fa-2x animate__animated"></i>
+                            </div>
+                        </div>
+                        <div class="card" data-bs-toggle="modal" data-bs-target="#FireWorks">
+                            <img src="assets/imagenes/trabajos/fireworks.png" class="card-img-top" alt="...">
+                            <div class="card-body row">
+                                <h5 class="col-9 card-title">Fuegos Artificiales</h5>
+                                <i class="col-3 fas fa-long-arrow-alt-right fa-2x animate__animated"></i>
+                            </div>
+                        </div>
+                        <div class="card" data-bs-toggle="modal" data-bs-target="#Fluidos">
+                            <img src="assets/imagenes/trabajos/fluidos.png" class="card-img-top" alt="...">
+                            <div class="card-body row">
+                                <h5 class="col-9 card-title" style="text-align: left;">Simulación de Fluidos</h5>
+                                <i class="col-3 fas fa-long-arrow-alt-right fa-2x animate__animated"></i>
+                            </div>
+                        </div>
+                        <div class="card" data-bs-toggle="modal" data-bs-target="#Olas">
+                            <img src="assets/imagenes/trabajos/olas.png" class="card-img-top" alt="...">
+                            <div class="card-body row">
+                                <h5 class="col-9 card-title">Olas</h5>
+                                <i class="col-3 fas fa-long-arrow-alt-right fa-2x animate__animated"></i>
+                            </div>
+                        </div>
+                        <div class="card" data-bs-toggle="modal" data-bs-target="#BillarFrances">
+                            <img src="assets/imagenes/trabajos/billar frances.png" class="card-img-top" alt="..." height="100%">
+                            <div class="card-body row">
+                                <h5 class="col-9 card-title">Billar Francés</h5>
+                                <i class="col-3 fas fa-long-arrow-alt-right fa-2x animate__animated"></i>
+                            </div>
+                        </div>
+                        <div class="card" data-bs-toggle="modal" data-bs-target="#Pinball">
+                            <img src="assets/imagenes/trabajos/pinball.png" class="card-img-top" alt="...">
+                            <div class="card-body row">
+                                <h5 class="col-9 card-title">Pinball</h5>
+                                <i class="col-3 fas fa-long-arrow-alt-right fa-2x animate__animated"></i>
+                            </div>
+                        </div>
+                        <div class="card" data-bs-toggle="modal" data-bs-target="#Banderas">
+                            <img src="assets/imagenes/trabajos/banderas.png" class="card-img-top" alt="...">
+                            <div class="card-body row">
+                                <h5 class="col-9 card-title">Tejidos y Banderas</h5>
+                                <i class="col-3 fas fa-long-arrow-alt-right fa-2x animate__animated"></i>
+                            </div>
+                        </div>
+                        <div class="card" data-bs-toggle="modal" data-bs-target="#Pendulo">
+                            <img src="assets/imagenes/trabajos/pendulo.png" class="card-img-top" alt="...">
+                            <div class="card-body row">
+                                <h5 class="col-9 card-title">Péndulo Elástico</h5>
+                                <i class="col-3 fas fa-long-arrow-alt-right fa-2x animate__animated"></i>
+                            </div>
+                        </div>
+                        <div class="card" data-bs-toggle="modal" data-bs-target="#MotorFisico">
+                            <img src="assets/imagenes/trabajos/motorfisico.png" class="card-img-top" alt="...">
+                            <div class="card-body row">
+                                <h5 class="col-9 card-title">Motor Físico</h5>
+                                <i class="col-3 fas fa-long-arrow-alt-right fa-2x animate__animated"></i>
+                            </div>
+                        </div>
+                        <div class="card" data-bs-toggle="modal" data-bs-target="#Orbita">
+                            <img src="assets/imagenes/trabajos/orbita.png" class="card-img-top" alt="...">
+                            <div class="card-body row">
+                                <h5 class="col-9 card-title">Órbita terrestre</h5>
+                                <i class="col-3 fas fa-long-arrow-alt-right fa-2x animate__animated"></i>
+                            </div>
+                        </div>
+                        <div class="card" data-bs-toggle="modal" data-bs-target="#BubbleShooter">
+                            <img src="assets/imagenes/trabajos/BubbleShooter.png" class="card-img-top" alt="...">
+                            <div class="card-body row">
+                                <h5 class="col-9 card-title">Bubble Shooter</h5>
+                                <i class="col-3 fas fa-long-arrow-alt-right fa-2x animate__animated"></i>
+                            </div>
+                        </div>
+                        <div class="card" data-bs-toggle="modal" data-bs-target="#TiroParabolico">
+                            <img src="assets/imagenes/trabajos/tiroparabolico.png" class="card-img-top" alt="...">
+                            <div class="card-body row">
+                                <h5 class="col-9 card-title">Tiro Parabólico</h5>
+                                <i class="col-3 fas fa-long-arrow-alt-right fa-2x animate__animated"></i>
+                            </div>
+                        </div>
+                </div>
+            </section>
+            <section class="my-4 work-section" id="Animacion">
+                <h2>Animación</h2>
+                <div class="fila-trabajos">
+                    <div class="card" data-bs-toggle="modal" data-bs-target="#riggingAnimacion">
+                        <img src="assets/imagenes/trabajos/rigging.png" class="card-img-top" alt="...">
+                        <div class="card-body row">
+                            <h5 class="col-9 card-title" style="text-align: left;">Rigging y Animación</h5>
+                            <i class="col-3 fas fa-long-arrow-alt-right fa-2x animate__animated"></i>
+                        </div>
+                    </div>
+                    <div class="card" data-bs-toggle="modal" data-bs-target="#TrayectoriaAlabeo">
+                        <img src="assets/imagenes/trabajos/Fase3AnimacionAlabeo.jpg" class="card-img-top" alt="...">
+                        <div class="card-body row">
+                            <h5 class="col-9 card-title">Interpolación trayectorias</h5>
+                            <i class="col-3 fas fa-long-arrow-alt-right fa-2x animate__animated"></i>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="my-4 work-section " id="Otros">
+                <h2>Otros</h2>
+                <div class="fila-trabajos">
+                    <div class="card" data-bs-toggle="modal" data-bs-target="#reproductorAudio">
+                        <img src="assets/imagenes/trabajos/reproductor.jpg" class="card-img-top" alt="...">
+                        <div class="card-body row">
+                            <h5 class="col-9 card-title">Reproductor Audio</h5>
+                            <i class="col-3 fas fa-long-arrow-alt-right fa-2x animate__animated"></i>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <footer class="bg-light container-fluid p-4">
+        <div class="row justify-content-center">
+            Copyright &copy; 2021
+        </div>
+    </footer>
+</body>
+</html>

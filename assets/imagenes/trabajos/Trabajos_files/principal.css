@@ -1,0 +1,140 @@
+@font-face{
+    font-family: "Uniform";
+    src: url('../fonts/UniformRegular.otf');
+    font-style: normal;
+}
+@font-face{
+    font-family: "Animal Silence";
+    src: url('../fonts/Animal Silence.otf');
+    font-style: normal;
+}
+html {
+  scroll-behavior: smooth;
+}
+body{
+    background-color: #f7f7f7;
+}
+header > nav > .container-fluid > a{
+    margin-left: 6%;
+    margin-top: 1px;
+}
+#logo{
+    margin: 0;
+    height: auto;
+    width: 200px;
+}
+.bgimage {
+    height: 50%;
+    width: 100%;
+    z-index: 0;
+}
+.header{
+    width: 100%;
+    z-index: 300;
+    transition: all .1s .1s ease-in;
+    background-color: #1C1C1C;
+}
+#logo {
+    margin-left: 0;
+}
+
+#header > .navbar > .container-fluid {
+    flex-direction: column;
+}
+
+@media(min-width: 990px) {
+    .header {
+        background-color: initial;
+        top: 0;
+        position: fixed;
+    }
+    #header > .navbar > .container-fluid {
+        flex-direction: row;
+    }
+    #logo {
+        margin-left: 8%;
+    }
+
+}
+@media(max-width: 990px){
+    #header > .navbar > .container-fluid > .navbar-collapse{
+        width: 100%;
+    }
+    #header > .navbar > .container-fluid > .navbar-collapse > ul{
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-around;
+    }    
+    #header > .navbar > .container-fluid > .navbar-collapse > ul > li > a{
+        font-size: 22px;
+    }   
+}
+@media(max-width: 575px){
+    section{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+#div-conocimientos{
+    margin-bottom: 0.8%;
+}
+h2{
+    margin-bottom: 12px;
+}
+.nav-link{
+    font-family: 'Uniform';
+    padding-bottom: 0px;
+    font-size: 24px;
+    color: white;
+    margin-left: 8px;
+    padding-left: 0;
+    padding-right: 0;
+}
+.active{
+    text-decoration: none;
+    transform: translateX(-3px);
+    transform: scale(1.05,1.05);
+    transition: 0.05s ease-in;
+    border-bottom: 2px solid white;
+}
+.carousel-control-prev .carousel-control-next{
+    height: 50px;
+}
+@media (min-width: 1400px){
+    .carousel-item img {
+        width: 100%;
+        height: 100vh;
+    }
+}
+.borde_detail{
+    border-left: 2px solid #1c1c1c;
+}
+#navbarScroll{
+    padding-right: 0;
+}
+.carousel-item > img{
+    filter: grayscale(10%);
+}
+#texto-carousel{
+    position: absolute; 
+    display: flex;
+    justify-content: center;
+    top: 40vh;
+    z-index: 300;
+    font-family: "Jazz LET";
+    font-variant: small-caps;
+    font-size: 100px;
+}
+.navbar-nav {
+    margin-right: 8%;
+}
+#scroll-indicator{
+    position: absolute;
+    top: 90vh;
+    left: 50%;
+    color: #fff;
+    opacity: 0.8;
+    z-index: 301;
+    animation-duration:	1.2s;
+    animation-iteration-count: infinite;
+}

@@ -1,0 +1,112 @@
+@font-face{
+    font-family: "Serif";
+    src: url('../fonts/SERIBL__.ttf');
+    font-style: bold;
+}
+.header{
+    background-color: #1c1c1c;
+}
+#mapid{
+  height: 250px;
+  width: 90%;
+}
+section.row{
+  height: 650px;
+  border: 1px solid rgba(28, 28, 28, 0.2);
+  box-shadow: 0.6px 0.6px 10px rgba(28, 28, 28, 0.3), -0.6px -0.6px 10px rgba(28, 28, 28, 0.3);
+}
+.form-floating > input, .form-floating > textarea{
+  width: 100%;
+}
+.input-group{
+  width: auto;
+}
+h5{
+  text-align: center;
+  color: white;
+  margin-bottom: 4%;
+}
+#mapid + div{
+  color: white;
+}
+h1{
+    font-family:"Serif";
+    font-size: 60px;
+    color: white;
+    width: 100%;
+    letter-spacing: 5px;
+    text-align: center;
+    margin-bottom: 4%;
+}
+@media (max-width: 800px){
+  h1{
+    font-size: 40px;
+  }
+}
+@media (max-width: 500px){
+  h1{
+    font-size: 30px;
+  }
+}
+#info-contacto{
+  background-color: #e5955f;
+  height: 100%;
+  padding-top: 4%;
+  padding-bottom: 1%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#div-form{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#floatingInput, #floatingTextarea2{
+  width: 400px;
+}
+@media (max-width: 1200px){
+  #floatingInput, #floatingTextarea2{
+    width: 300px;
+  }
+}
+@media (max-width: 990px){
+  #floatingInput, #floatingTextarea2{
+    width: 100%;
+  }
+}
+@media (max-width: 800px){
+  #floatingTextarea2{
+    width: 100%;
+    padding-bottom: 0;
+  }
+  section.row{
+    height: auto;
+  }
+  #info-contacto{
+    height: auto;
+  }
+  .btn{
+    margin-bottom: 15px;
+  }
+}
+form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.btn{
+    background-color: #1c1c1c;
+    transition: all 0.1s ease-in;
+    color: white;
+    width: 120px;
+}
+.btn:hover{
+    transform: scale(1.1, 1.1);
+    color: white;
+}
+:required{
+    color: red;
+}
