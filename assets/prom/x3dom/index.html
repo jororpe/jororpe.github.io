@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="estilos.css" rel="stylesheet" type="text/css">
+    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link type="text/css" rel="stylesheet" href="https://x3dom.org/release/x3dom.css"/>
+    <script src="https://x3dom.org/release/x3dom.js"></script>
+    <script src="script.js" defer></script>
+    <title>EDITOR ESCENAS</title>
+    <script>
+
+    function test() {
+      console.log("test");
+    }
+    </script>
+</head>
+<body>
+    <header>
+        <div>
+            <h1>EDITOR ESCENAS 3D CON X3DOM</h1>
+        </div>
+
+        <form id="form">
+            <div id="form_data">
+                <div class="form-group">
+                    <div class="group">
+                        <div style="display: flex; justify-content: flex-start;">
+                            <input type="radio" name="radio-group" value="box" id="box" checked/>
+                            <label for="box" class="resaltar">Cubo:</label>
+                        </div>
+                        <div>
+                            <label for="Lado">Lado</label>
+                            <input type="number" id="Lado" step="0.5"/>
+                        </div>
+                    </div>
+                    <div class="group">
+                        <div>
+                            <input type="radio" name="radio-group" value="sphere" id="sphere"/>
+                            <label for="sphere" class="resaltar">Esfera:</label>
+                        </div>
+                        <div>
+                            <label for="RadioEsfera">Radio</label>
+                            <input type="number" id="RadioEsfera" step="0.5"/>
+                        </div>
+                    </div>
+                    <div class="group">
+                        <div>
+                            <input type="radio" name="radio-group" value="cone" id="cone"/>
+                            <label for="cone" class="resaltar">Cono:</label>
+                        </div>
+                        <div>
+                            <label for="RadioCono">Radio</label>
+                            <input type="number" id="RadioCono" step="0.5"/>
+                            <label for="AltoCono">Alto</label>
+                            <input type="number" id="AltoCono" step="0.5"/>
+                        </div>
+                    </div>
+                    <div class="group">
+                        <input type="radio" name="radio-group" value="torus" id="torus"/>
+                        <label for="torus" class="resaltar">Toro:</label>
+                        <label for="Rint">Rint</label>
+                        <input type="number" id="Rint" step="0.5"/>
+                        <label for="Rext">Rext</label>
+                        <input type="number" id="Rext" step="0.5"/>
+                    </div>
+                    <div class="group" style="justify-content: flex-start;">
+                        <label for="color" class="resaltar">Color</label>
+                        <input type="color" id="color"/>
+                    </div>
+                    <div class="group">
+                        <label class="resaltar">Posicion</label>
+                        <label for="posX">X</label>
+                        <input type="number" id="posX" step="0.5"/>
+                        <label for="posY">Y</label>
+                        <input type="number" id="posY" step="0.5"/>
+                        <label  for="posZ">Z</label>
+                        <input type="number" id="posZ" step="0.5"/>
+
+                    </div>
+                    <div class="group">
+                        <button class="btn" id="Insert">Insertar</button>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="group">
+                        <label for="cambiarColor" class="resaltar">Cambiar Color</label>
+                        <input type="color" id="cambiarColor"/>
+                    </div>
+                    <div class="group">
+                        <label class="resaltar">Trasladar</label>
+                    </div>
+                    <div class="group">
+                        <label for="posXT">X</label>
+                        <input type="number" id="posXT" step="0.5"/>
+                        <label for="posYT">Y</label>
+                        <input type="number" id="posYT" step="0.5"/>
+                        <label for="posZT">Z</label>
+                        <input type="number" id="posZT" step="0.5"/>
+                    </div>
+                    <div class="group">
+                        <label class="resaltar">Escalar</label>
+                    </div>
+                    <div class="group">
+                        <label for="posXE">X</label>
+                        <input type="number" id="posXE" step="0.5"/>
+                        <label for="posYE">Y</label>
+                        <input type="number" id="posYE" step="0.5"/>
+                        <label for="posZE">Z</label>
+                        <input type="number" id="posZE" step="0.5"/>
+                    </div>
+                    <div class="group">
+                        <button class="btn" id="Modify">Modificar</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </header>
+    <x3d width="1000" height="600">
+    <scene>
+      <inline url="grid_20x20.x3d"></inline>
+      <inline url="axis.x3d"></inline>
+    </scene>
+</x3d>
+</div>
+</body>
+</html>

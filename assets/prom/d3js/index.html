@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <title>Visualización de datos</title>
+  <style>
+
+  html, body, svg {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .links line {
+    stroke-opacity: 0.7;
+  }
+
+  .nodes circle {
+    stroke: #fff;
+    stroke-width: 1.5px;
+  }
+
+  </style>
+  
+</head>
+<body>
+  <svg width="960" height="700"></svg>
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <script>
+
+  var svg = d3.select("svg"),
+      width = +svg.attr("width"),
+      height = +svg.attr("height");
+
+  var color = d3.scaleOrdinal(d3.schemeCategory20);
+
+  var simulation = d3.forceSimulation()
+      .force("link", d3.forceLink().id(function(d) { return d.id; }))
+      .force("charge", d3.forceManyBody())
+      .force("center", d3.forceCenter(width / 2, height / 2));
+
+  d3.json("familia.json", function(graph) {
+
+    var link = svg.append("g")
+        .attr("class", "links")
+      .selectAll("line")
+      .data(graph.links)
+      .enter().append("line")
+        //Grosor Link
+        .attr("stroke-width", function(d) {
+                            switch(d.parentesco) 
+                            {
+                              case "hermano":
+                                return 3;
+                              case "padre":
+                                return 1.5;
+                              case "matrimonio":
+                                return 8;
+                            }
+        })
+          // Color link
+          .attr("stroke", function(d){
+                            switch(d.parentesco) 
+                            {
+                              case "hermano":
+                                return "green";
+                              case "padre":
+                                return "orange";
+                              case "matrimonio":
+                                return "red";
+                              default:
+                                return "black";
+                            }
+        })
+        //Líneas discontínuas
+        .attr("stroke-dasharray",function(d){       
+                              if(d.parentesco == "hermano")
+                                return 3;
+                              else
+                                  return 0;
+      });
+
+    var node = svg.append("g")
+        .attr("class", "nodes")
+      .selectAll("circle")
+      .data(graph.nodes)
+      .enter().append("circle")
+        .attr("r", function(d){ return d.edad/1.8})
+        .attr("fill", function(d) { return color(d.group); })
+        .call(d3.drag()
+            .on("start", dragstarted)
+            .on("drag", dragged)
+            .on("end", dragended));
+
+    node.append("title")
+        .text(function(d) { return d.id; });
+
+   /* var labels = svg.append("g")
+      .attr("class", "labels")
+      .selectAll("text")
+      .data(graph.nodes)
+      .enter().append("text")
+      .text(function(d) {return d.id})
+      .style("text-anchor", "middle");*/
+    
+    simulation
+      .nodes(graph.nodes)
+      .on("tick", ticked);
+
+    simulation.force("link")
+      .links(graph.links)
+        //Distancia entre los nodos (link)
+      .distance(function(d){
+
+        switch(d.parentesco)
+        {
+          case "hermano":
+            return 160;
+          case "padre":
+            return 300;
+          case "matrimonio":
+            return 80;
+        }
+      });
+
+    function ticked() {
+      link
+          .attr("x1", function(d) { return d.source.x; })
+          .attr("y1", function(d) { return d.source.y; })
+          .attr("x2", function(d) { return d.target.x; })
+          .attr("y2", function(d) { return d.target.y; });
+
+      node
+          .attr("cx", function(d) { return d.x; })
+          .attr("cy", function(d) { return d.y; });
+
+      labels.attr("x", function(d) {return d.x;})
+        .attr("y", function(d) {return d.y;});
+    }
+  });
+
+  function dragstarted(d) {
+    if (!d3.event.active) simulation.alphaTarget(0.3).restart();
+    d.fx = d.x;
+    d.fy = d.y;
+  }
+
+  function dragged(d) {
+    d.fx = d3.event.x;
+    d.fy = d3.event.y;
+  }
+
+  function dragended(d) {
+    if (!d3.event.active) simulation.alphaTarget(0);
+    d.fx = null;
+    d.fy = null;
+  }
+
+  </script>
+</body>
+</html>
