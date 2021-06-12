@@ -138,6 +138,19 @@ h2{
     animation-duration:	1.2s;
     animation-iteration-count: infinite;
 }
-section{
+main.bg-light section{
     text-align: justify;
+    padding-bottom: 50px;
+}
+.subjects-header img{
+    width: auto;
+    height: 150px;
+    padding: 0;
+    margin: 0;
+    transition: transform .5s ease-out, filter .3s ease-out;
+}
+
+.subjects-header img:hover{
+    transform: scale(1.4, 1.4);
+    filter: none;
 }

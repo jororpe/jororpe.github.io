@@ -1,9 +1,9 @@
 .card:hover{
     transform: scale(1.1,1.1);
-    box-shadow: 1px 1px 25px rgba(0,0,0,0.08), -1px -1px 25px rgba(0,0,0,0.08);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 .card{
-  transition: all .3s .05s ease-in-out;
+  transition: all .4s .05s ease-in-out;
 }
 .card-body{
   display: flex;
