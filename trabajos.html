@@ -175,7 +175,87 @@
         </div>
       </div>
     </div>
-  </div>
+</div>
+<div class="modal fade" id="PaintJava" tabindex="-1" aria-labelledby="PaintJavaLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="PaintJavaLabel">Paint</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="container">
+            <div class="d-flex justify-content-center">
+                <iframe width="720" height="405" src="https://www.youtube.com/embed/zsTmwA0obr0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="text">
+                <p>Programa de un dibujador de figuras geométricas, capaz de dibujar círculos, triángulos, cuadrados y rectángulos. <br>
+                    El usuario puede elegir tanto el color de la figura como el color del borde.</p>
+                <p>La aplicación tendrá dos ventanas principales, una para escoger los valores por defecto con los que pintar, y otra que representará el lienzo,
+                    donde también se podrán modificar dinámicamente los valores de los colores, como el grosor del pincel.
+                </p>
+                <p>
+                    Existen dos opciones para borrar las figuras dibujadas:
+                    <ul>
+                        <li><u>Herramienta de borrador</u>.</li>
+                        <li><u>Vaciar lienzo</u> haciendo click derecho sobre el mismo lienzo.</li>
+                        
+                    </ul>
+                </p>
+                <p>El código de la aplicación está estructurado siguiendo la arquitectura de software <b>M</b>odelo - <b>V</b>ista - <b>C</b>ontrolador </p>
+            </div>
+        </div>
+        <div class="modal-footer">
+        </div>
+      </div>
+    </div>
+</div>
+<div class="modal fade" id="DolarEuro" tabindex="-1" aria-labelledby="DolarEuroLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="DolarEuroLabel">Conversor Divisas</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="container">
+            <div class="d-flex justify-content-center">
+                <iframe width="720" height="405" src="https://www.youtube.com/embed/5fzQwpcfIzg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="text">
+                <p>Apliación programada en <b>Java</b>, capaz de convertir entre divisas. Dentro de la misma, existe la opción de modificar la tasa de cambio entre divisas.</p>
+                <p>El código de la aplicación está estructurado siguiendo la arquitectura de software Modelo-Vista-Controlador <b>(MVC)</b> </p>
+            </div>
+        </div>
+        <div class="modal-footer">
+        </div>
+      </div>
+    </div>
+</div>
+<div class="modal fade" id="WireframesWeb" tabindex="-1" aria-labelledby="WireframesWebLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="WireframesWebLabel">Wireframes Web</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="container">
+            <div class="text">
+                <p>Boceto visual donde se representa visualmente el concepto de esta misma página web en sus estapas tempranas de desarrollo.</p>
+
+                <p>Incluyen cajas de imágenes, textos, enlaces, menús de navegación, y la posición de cada uno de estos elementos mencionados anteriormente.</p>
+
+                <p>Estos prototipos surgieron de un intenso brainstorming, y fueron diseñados utilizando la herramienta web <b>Cacoo</b>.</p>
+            </div>
+            <div class="container-fluid d-flex flex-column justify-content-center">
+                <img class="col-md-8 col-12 mx-auto" src="assets/imagenes/trabajos/prototipo web/Portada.png" />
+                <img class="col-md-8 col-12 mx-auto" src="assets/imagenes/trabajos/prototipo web/Trabajos.png" />
+                <img class="col-md-8 col-12 mx-auto" src="assets/imagenes/trabajos/prototipo web/Contacto.png" /> 
+            </div>
+        </div>
+        <div class="modal-footer">
+        </div>
+      </div>
+    </div>
+</div>
 
 <!-- Simulacion -->
   <div class="modal fade" id="BubbleShooter" tabindex="-1" aria-labelledby="BubbleShooterLabel" aria-hidden="true">
@@ -708,6 +788,39 @@
                         
                 </div>
             </section>
+            <section class="my-4 work-section " id="Otros">
+                <h2>Interfaces</h2>
+                <div class="fila-trabajos">
+                    <div class="card"  data-bs-toggle="modal" data-bs-target="#PrototipoApp">
+                        <img src="assets/imagenes/trabajos/prototipoAplicacion.png" class="card-img-top" alt="...">
+                        <div class="card-body row">
+                            <h5 class="col-9 card-title">Prototipo App <p>ADOBE XD</p></h5>
+                            <i class="col-3 fas fa-long-arrow-alt-right fa-2x animate__animated"></i>
+                        </div>
+                    </div>
+                    <div class="card" data-bs-toggle="modal" data-bs-target="#PaintJava">
+                        <img src="assets/imagenes/trabajos/paint.png" class="card-img-top" alt="...">
+                        <div class="card-body row">
+                            <h5 class="col-9 card-title">Paint <p>Java</p></h5>
+                            <i class="col-3 fas fa-long-arrow-alt-right fa-2x animate__animated"></i>
+                        </div>
+                    </div>
+                    <div class="card" data-bs-toggle="modal" data-bs-target="#WireframesWeb">
+                        <img src="assets/imagenes/trabajos/prototipo web/Portada.png" class="card-img-top" alt="...">
+                        <div class="card-body row">
+                            <h5 class="col-9 card-title">Wireframes Web<p>Cacoo</p></h5>
+                            <i class="col-3 fas fa-long-arrow-alt-right fa-2x animate__animated"></i>
+                        </div>
+                    </div>
+                    <div class="card" data-bs-toggle="modal" data-bs-target="#DolarEuro">
+                        <img src="assets/imagenes/trabajos/dolareuro.png" class="card-img-top" alt="...">
+                        <div class="card-body row">
+                            <h5 class="col-9 card-title">Conversor <br>Divisas<p>Java</p></h5>
+                            <i class="col-3 fas fa-long-arrow-alt-right fa-2x animate__animated"></i>
+                        </div>
+                    </div>
+                </div>
+            </section>
             <section class="my-4 work-section" id="Simulacion">
                 <h2>Simulación</h2>
                 <div class="fila-trabajos">
@@ -852,13 +965,6 @@
             <section class="my-4 work-section " id="Otros">
                 <h2>Otros</h2>
                 <div class="fila-trabajos">
-                    <div class="card"  data-bs-toggle="modal" data-bs-target="#PrototipoApp">
-                        <img src="assets/imagenes/trabajos/prototipoAplicacion.png" class="card-img-top" alt="...">
-                        <div class="card-body row">
-                            <h5 class="col-9 card-title">Prototipo App <p>ADOBE XD</p></h5>
-                            <i class="col-3 fas fa-long-arrow-alt-right fa-2x animate__animated"></i>
-                        </div>
-                    </div>
                     <div class="card" data-bs-toggle="modal" data-bs-target="#reproductorAudio">
                         <img src="assets/imagenes/trabajos/reproductor.jpg" class="card-img-top" alt="...">
                         <div class="card-body row">
